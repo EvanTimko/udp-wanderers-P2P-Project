@@ -1,3 +1,25 @@
+import DataFiles
+import selectors
+from socket import *
+
+data = open("INFORMATION", "rt")
+
+if data == None:
+    print("""Error "INFORMATION" file is Not found in directory""")
+
+dfList = DataFiles.doublyLinkedList()
+information = data.readline().split(',', 3)
+dfList.insertToEmptyList(information[0], information[1], information[2])
+
+for x in data:
+    information = x.split(',', 3)
+    dfList.insertToEnd(information[0], information[1], information[2])
+
+data.close()
+dfList.Display()
+
+
+
 # import socket
 #
 # soc = socket.socket()
