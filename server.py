@@ -1,6 +1,13 @@
 import DataFiles
 import selectors
 from socket import *
+import os
+import re
+
+data = open("INFORMATION", "rt")
+
+if data == None:
+    print("""Error "INFORMATION" file is Not found in directory""")
 
 #opens The file and checks if it is in the project
 data = open("INFORMATION", "rt")
@@ -8,6 +15,7 @@ if data == None:
     print("""Error "INFORMATION" file is Not found in directory""")
 
 #Makes a list and populates it with the available information
+
 dfList = DataFiles.doublyLinkedList()
 information = data.readline().split(',', 3)
 dfList.insertToEmptyList(information[0], information[1], information[2])
@@ -18,8 +26,6 @@ for x in data:
 
 data.close()
 dfList.Display()
-
-
 
 
 # import socket
@@ -39,10 +45,6 @@ dfList.Display()
 # file_data = file.read(1024)
 # conn.send(file_data)
 # print("file sent, yeah evan !!!!")
-import os
-import re
-import selectors
-import socket
 
 
 def get_ip(ifaces=['wlan1', 'eth0', 'wlan0']):
