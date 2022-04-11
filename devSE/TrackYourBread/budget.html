@@ -18,13 +18,46 @@
     <div>
         <nav>
             <ul>
-                <li><a class="active" href="dashboard.html">Dashboard</a></li>
-                <li><a href="budget.html">Budget</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a class="active" href="budget.html">Budget</a></li>
                 <li><a href="addExpense.html">Add Expense</a></li>
                 <li><a href="transactions.html">Transactions</a></li>
             </ul>
 
         </nav>
     </div>
+    <div>
+        <h1 id="date"></h1>
+
+    </div>
+    <div>
+
+        <button class="button button5" onclick="document.getElementById('id012').style.display='block'">Housing</button>
+        <button class="button button5" onclick="document.getElementById('id012').style.display='block'">Transportaion</button>
+        <button class="button button5" onclick="document.getElementById('id012').style.display='block'">Food</button>
+        <button class="button button5" onclick="document.getElementById('id012').style.display='block'">Utilities</button>
+        <button class="button button5" onclick="document.getElementById('id012').style.display='block'">Insurance</button>
+        <button class="button button5" onclick="document.getElementById('id012').style.display='block'">Medical</button>
+        <button class="button button5" onclick="document.getElementById('id012').style.display='block'">Saving</button>
+        <button class="button button5" onclick="document.getElementById('id012').style.display='block'">Personal</button>
+        <button class="button button5" onclick="document.getElementById('id012').style.display='block'">Entertainment</button>
+        <button class="button button5" onclick="document.getElementById('id012').style.display='block'">Misc.</button>
+
+        <div id="id012" class="modal">
+            <span onclick="document.getElementById('id012').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+            <!-- Modal Content -->
+            <form class="modal-content animate" action="/action_page.php">
+
+                <div class="container">
+                    <label for="trans"><b>Budget</b></label>
+                    <input type="text" placeholder="$100" name="uname" required>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+    <script src="budget.js"></script>
 
 </html>
