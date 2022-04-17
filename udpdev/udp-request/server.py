@@ -31,6 +31,7 @@ def server_program():
                 n = n.next
             if n is None:
                 conn.send(bytes("\n", encoding="utf-8"))
+                sleep(2)
                 conn.send(bytes("DONE", encoding="utf-8"))
 
         def pass1():
